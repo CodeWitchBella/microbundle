@@ -543,6 +543,8 @@ function createConfig(options, entry, format, writeMeta) {
 						exclude: 'node_modules/**',
 						plugins: [
 							require.resolve('@babel/plugin-syntax-jsx'),
+							// patch: remove this plugin
+							/*
 							[
 								require.resolve('babel-plugin-transform-replace-expressions'),
 								{ replace: defines },
@@ -551,6 +553,7 @@ function createConfig(options, entry, format, writeMeta) {
 								require.resolve('babel-plugin-transform-async-to-promises'),
 								{ inlineHelpers: true, externalHelpers: true },
 							],
+							*/
 							[
 								require.resolve('@babel/plugin-proposal-class-properties'),
 								{ loose: true },
